@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Comparator;
 import java.util.TreeSet;
+import java.util.Set;
 
 /**
  * 
@@ -20,16 +21,19 @@ public class Solution_D4_7701 {
 		T = Integer.parseInt(br.readLine().trim());
 		
 		for (int t = 1; t <= T; t++) {
-			TreeSet<String> tS = new TreeSet<>(new Comparator<String>() {
-				@Override
-				public int compare(String o1, String o2) {
-					if (o1.length() - o2.length() == 0)
-						return o1.compareTo(o2);
-					else
-						return o1.length() - o2.length();
-				}
-				
-			});
+			/* sol 1 */
+			Set<String> tS = new TreeSet<>(new comp());
+			
+			/* sol 2 */
+//			Set<String> tS = new TreeSet<>(new Comparator<String>() {
+//                @Override
+//                public int compare(String o1, String o2) {
+//                    if (o1.length() - o2.length() == 0)
+//                        return o1.compareTo(o2);
+//                    else
+//                        return o1.length() - o2.length();
+//                }
+//            });
 			
 			N = Integer.parseInt(br.readLine().trim());
 			
@@ -41,5 +45,15 @@ public class Solution_D4_7701 {
 				System.out.println(string);
 		}
 	}
+}
 
+class comp implements Comparator<String> {
+	@Override
+	public int compare(String o1, String o2) {
+		if (o1.length() - o2.length() == 0)
+			return o1.compareTo(o2);
+		else
+			return o1.length() - o2.length();
+	}
+		
 }
