@@ -21,11 +21,13 @@ public class NewsMain {
 	private JButton b;
 	private JList li;
 	private JTextArea ta;
-	private INewsDAO dao;
+	private INewsDAO dao_dom;
+	private INewsDAO dao_sax;
 	
 	
 	public NewsMain() {
-		dao = new NewsDAOSAXImpl();
+		dao_dom = NewsDAODOMImpl.getInstance();
+		dao_sax = NewsDAOSAXImpl.getInstance();
 		createGUI();
 		addEvent();
 		showList();
@@ -70,9 +72,10 @@ public class NewsMain {
 	}
 	
 	public void showList() {
-		List<News> datas = dao.getNewsList("http://rss.etnews.com/Section902.xml");
+		List<News> list = dao_dom.getNewsList("http://rss.etnews.com/Section902.xml");
+//		List<News> list = dao_sax.getNewsList("http://rss.etnews.com/Section902.xml");
 		li.removeAll();
-		li.setListData(datas.toArray());
+		li.setListData(list.toArray());
 	}
 
 	public static void main(String[] args) {

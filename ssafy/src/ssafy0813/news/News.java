@@ -42,7 +42,13 @@ public class News {
 
 	@Override
 	public String toString() {
-		return "News [title=" + title + ", desc=" + desc + ", link=" + link + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append(title);
+//		builder.append("/t");
+//		builder.append(desc);
+//		builder.append("/t");
+//		builder.append(link);
+		return builder.toString();
 	}
 	
 }

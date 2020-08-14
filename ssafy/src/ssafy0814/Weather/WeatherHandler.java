@@ -43,7 +43,7 @@ public class WeatherHandler extends DefaultHandler   {
 			throws SAXException {
 		
 		if (qName.equals("data")) {
-			
+			 list.add(weather);
 		} else if (qName.equals("hour") && bHour) {
 			weather.setHour(Integer.parseInt(data.toString()));
 			bHour = false;
