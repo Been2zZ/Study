@@ -1,4 +1,4 @@
-package ssafy0819.com;
+package com.ssafy.edu.common;
 
 import java.io.*;
 import java.util.*;

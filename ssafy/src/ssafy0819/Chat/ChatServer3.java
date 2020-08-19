@@ -1,4 +1,4 @@
-package ssafy0819;
+package ssafy0819.Chat;
 
 import java.io.IOException;
 import java.net.ServerSocket;

@@ -1,4 +1,4 @@
-package ssafy0819;
+package ssafy0819.Chat;
 
 import java.io.BufferedReader;
 import java.io.IOException;

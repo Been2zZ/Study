@@ -1,14 +1,16 @@
-package ssafy0819;
+package ssafy0819.Chat;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ChatServer1 {
+public class ChatServer2 {
 
 	String ip = "127.0.0.1";
-	int port = 9876;
+	int port = 9877;
 	
 	public void go() {
 		try(ServerSocket ss = new ServerSocket(port)) {
@@ -21,14 +23,20 @@ public class ChatServer1 {
 				System.out.println("2. ServerSocket Contact ~~~~");
 				System.out.println(s.getLocalAddress());
 				System.out.println(s.getInetAddress());
+				// socket에서 메세지 읽어서
 				BufferedReader br = new BufferedReader(
 						new InputStreamReader(s.getInputStream()));
-				
-				String msg = "";
-				while((msg = br.readLine()) != null) {
-					System.out.println(msg);
+				// socket에서 메세지 보내기
+				try(PrintWriter pw = new PrintWriter(
+						new OutputStreamWriter(s.getOutputStream()), true)) {
+					String msg = "";
+					while((msg = br.readLine()) != null) {
+//						System.out.println(msg);
+						pw.println("[s]" + msg);
+					}
+				} catch (Exception e) {
+					System.out.println(e);
 				}
-				
 			}
 		} catch (Exception e) {
 			System.out.println(e);
@@ -36,7 +44,7 @@ public class ChatServer1 {
 	}
 	
 	public static void main(String[] args) {
-		ChatServer1 server = new ChatServer1();
+		ChatServer2 server = new ChatServer2();
 		server.go();
 	}
 }

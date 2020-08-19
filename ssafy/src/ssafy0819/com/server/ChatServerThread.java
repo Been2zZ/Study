@@ -3,7 +3,7 @@ package ssafy0819.com.server;
 import   java.io.*;
 import   java.util.*;
 
-import ssafy0819.com.Data;
+import com.ssafy.edu.common.Data;
 
 public class ChatServerThread implements Runnable{
 

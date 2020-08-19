@@ -2,10 +2,11 @@ package ssafy0819.com.client;
 
 import  java.io.*;
 import  java.net.*;
+
+import com.ssafy.edu.common.Data;
+
 import  java.awt.*;
 import  java.awt.event.*;
-
-import ssafy0819.com.Data;
 
 public class ChatClient{
 	Socket socket;
