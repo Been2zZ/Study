@@ -1,9 +1,9 @@
-package ssafy0818.ChattingGUI.server;
+package ssafy0819.com.server;
 
 import   java.io.*;
 import   java.util.*;
 
-import ssafy0818.ChattingGUI.Data;
+import ssafy0819.com.Data;
 
 public class ChatServerThread implements Runnable{
 
