@@ -1,4 +1,4 @@
-package ssafy0818.ChattingGUI;
+package com.ssafy.edu.common;
 
 import java.io.*;
 import java.util.*;

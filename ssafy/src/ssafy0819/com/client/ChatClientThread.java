@@ -1,9 +1,9 @@
-package ssafy0818.ChattingGUI.client;
+package ssafy0819.com.client;
 
 import    java.io.*;
 import    java.util.*;
 
-import ssafy0818.ChattingGUI.Data;
+import com.ssafy.edu.common.Data;
 
 public class ChatClientThread implements Runnable{
 	ObjectInputStream  ois;

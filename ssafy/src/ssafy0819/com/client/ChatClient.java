@@ -1,11 +1,12 @@
-package ssafy0818.ChattingGUI.client;
+package ssafy0819.com.client;
 
 import  java.io.*;
 import  java.net.*;
+
+import com.ssafy.edu.common.Data;
+
 import  java.awt.*;
 import  java.awt.event.*;
-
-import ssafy0818.ChattingGUI.Data;
 
 public class ChatClient{
 	Socket socket;
