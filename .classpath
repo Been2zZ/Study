@@ -3,6 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="ssafy/src"/>
-	<classpathentry kind="lib" path="C:/Users/multicampus/Downloads/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/ssafy/gson-2.8.6.jar"/>
 	<classpathentry kind="output" path="ssafy/bin"/>
 </classpath>
